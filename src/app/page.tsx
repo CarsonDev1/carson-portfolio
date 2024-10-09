@@ -25,7 +25,7 @@ const projects = [
 		description:
 			'Productivity tool with real-time updates, collaborative features, and intuitive UI for efficient task organization and team coordination.',
 		tags: ['Vue.js', 'Firebase', 'Vuex'],
-		image: '/task-management-app.jpg',
+		image: '/project-01.png',
 	},
 	{
 		id: 3,
@@ -33,7 +33,7 @@ const projects = [
 		description:
 			'Responsive showcase for creative professionals with dynamic content loading, smooth animations, and optimized performance.',
 		tags: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
-		image: '/portfolio-website.jpg',
+		image: '/project-01.png',
 	},
 ];
 
@@ -275,20 +275,24 @@ export default function Portfolio() {
 									whileInView={{ opacity: 1, y: 0 }}
 									transition={{ duration: 0.5, delay: index * 0.1 }}
 								>
-									<Card className='bg-white bg-opacity-10 border-none h-[450px] flex flex-col'>
-										<CardHeader>
-											<CardTitle className='text-white'>{project.title}</CardTitle>
+									<Card className='bg-white bg-opacity-5 border border-gray-700 rounded-2xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl'>
+										<CardHeader className='p-4'>
+											<CardTitle className='text-lg font-bold text-white'>
+												{project.title}
+											</CardTitle>
 										</CardHeader>
-										<CardContent className='flex-grow overflow-hidden'>
-											<Image
-												src={project.image}
-												alt={project.title}
-												width={400}
-												height={200}
-												className='rounded-md mb-4'
-											/>
-											<ScrollArea className='h-[150px]'>
-												<CardDescription className='text-gray-300'>
+										<CardContent className='p-4 flex-grow'>
+											<div className='relative w-full h-40'>
+												<Image
+													src={project.image}
+													alt={project.title}
+													layout='fill'
+													objectFit='cover'
+													className='rounded-md'
+												/>
+											</div>
+											<ScrollArea className='mt-4 h-20'>
+												<CardDescription className='text-gray-300 text-sm leading-relaxed'>
 													{project.description}
 												</CardDescription>
 											</ScrollArea>
@@ -304,10 +308,10 @@ export default function Portfolio() {
 												))}
 											</div>
 										</CardContent>
-										<CardFooter className='mt-auto'>
+										<CardFooter className='p-4'>
 											<Button
 												variant='outline'
-												className='w-full text-white border-white hover:bg-white hover:text-black'
+												className='w-full rounded-full text-white border-gray-500 hover:bg-gray-800 hover:text-white'
 											>
 												View Project <ExternalLink className='ml-2 h-4 w-4' />
 											</Button>
