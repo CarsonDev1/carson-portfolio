@@ -192,7 +192,13 @@ export default function Portfolio() {
 									transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
 									className='bg-white bg-opacity-10 rounded-full p-2'
 								>
-									<img src={skill.image} alt={skill.name} className='w-12 h-12 rounded-full' />
+									<Image
+										src={skill.image}
+										alt={skill.name}
+										width={48}
+										height={48}
+										className='rounded-full'
+									/>
 								</motion.div>
 							))}
 						</motion.div>
@@ -242,14 +248,14 @@ export default function Portfolio() {
 								className='max-w-md'
 							>
 								<p className='text-gray-300 mb-4'>
-									I’m Software Engineer with 2 years of experience in Web Development. I have 1.5
+									I&apos;m Software Engineer with 2 years of experience in Web Development. I have 1.5
 									years of React-related technologies. With my knowledge of UI/UX design, i enjoy
 									solving front-end problems and creating the best user experience for uses. I also
 									spend time learning new technologies and best practices to become a better engineer.
 								</p>
 								<p className='text-gray-300'>
-									When I'm not coding, you can find me exploring new technologies, contributing to
-									open-source projects, or sharing my knowledge through tech blogs and community
+									When I&apos;m not coding, you can find me exploring new technologies, contributing
+									to open-source projects, or sharing my knowledge through tech blogs and community
 									meetups.
 								</p>
 							</motion.div>
