@@ -206,7 +206,7 @@ export default function Portfolio() {
 							className='bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-full shadow-lg transition-transform transform hover:scale-105'
 							onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
 						>
-							Liên hệ ngay
+							Contact Now
 						</Button>
 					</motion.div>
 					<motion.div
